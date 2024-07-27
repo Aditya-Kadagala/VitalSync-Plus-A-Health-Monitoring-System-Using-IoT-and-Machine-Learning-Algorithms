@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+body {
+    width: 100vw;
+    /* background: linear-gradient(#567,#687); */
+    background: linear-gradient(270deg, #ef8e8e, #ff9900, #6fe56f, #75d1f0, #9933ff);
+    background-size: 1000% 1000%;
+    animation: colorAnimation 20s ease infinite;
+}
+@keyframes colorAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar {
+    backdrop-filter: blur(5rem);
+    border-radius: 10px; 
+    padding: 20px; 
+}
+
+.navbar .logo-heading {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.abstract {
+    font-size: 60rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.data-here .dh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.data-here .dh a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(177, 43, 222);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+.profile-d {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+#text-container {
+    padding: 20px;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    white-space: pre-wrap; 
+    overflow: hidden;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    animation: fadeOut 4s ease forwards;
+}
+
+.star {
+    width: 100px;
+    height: 100px;
+    background: rgb(18, 137, 222);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: drawStar 4s ease forwards;
+}
+
+@keyframes drawStar {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(10);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+.iddw {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(25rem);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
